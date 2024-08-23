@@ -62,6 +62,7 @@
 @layer base {
   * {
     @apply border-border;
+    word-wrap: break-word;
   }
 
   body {

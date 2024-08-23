@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Check, Copy } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import styles from './Chat.module.css';
 
 interface Message {
@@ -88,6 +89,7 @@ export function ChatComponent({ chatSession }: ChatComponentProps) {
                   marginBottom: '1rem',
                   flexDirection: 'column',
                   alignItems: message.sender === 'user' ? 'flex-end' : 'flex-start',
+                  maxWidth: '100%',
                 }}
               >
                 <div
@@ -95,6 +97,7 @@ export function ChatComponent({ chatSession }: ChatComponentProps) {
                     display: 'flex',
                     alignItems: 'flex-start',
                     flexDirection: message.sender === 'user' ? 'row-reverse' : 'row',
+                    maxWidth: '80%'
                   }}
                 >
                   <div
@@ -118,18 +121,21 @@ export function ChatComponent({ chatSession }: ChatComponentProps) {
                       borderRadius: '0.375rem',
                       backgroundColor: message.sender === 'user' ? '#dbeafe' : '#d1fae5',
                       color: message.sender === 'user' ? '#1e3a8a' : '#064e3b',
-                      maxWidth: '80%',
-                      wordWrap: 'break-word',
+                      maxWidth: 'calc(100% - 2.5rem)',
                       position: 'relative',
                     }}
                   >
-                    {message.text}
+                    {message.sender === 'bot' ? (
+                      <ReactMarkdown>{message.text}</ReactMarkdown>
+                    ) : (
+                      message.text
+                    )}
                     {message.sender === 'bot' && (
                       <Button
                         onClick={() => handleCopy(message.text, message.id)}
                         variant="outline"
                         size="icon"
-                        className="absolute bottom-8 -right-10 transform translate-y-8"
+                        className="absolute bottom-2 -right-10 transform translate-y-1"
                         aria-label={copiedMessageId === message.id ? "Copied" : "Copy to clipboard"} 
                       >
                         {copiedMessageId === message.id ? (
@@ -164,7 +170,7 @@ export function ChatComponent({ chatSession }: ChatComponentProps) {
         </div>
       </ScrollArea>
 
-      <div className="sticky bottom-4 bg-background py-4 flex flex-col gap-1.5 px-4 max-w-2xl mx-auto">
+      <div className="sticky bottom-4 bg-background py-4 flex flex-col gap-1.5 px-4 max-w-6xl mx-auto">
         <div className="relative">
           <Input
             placeholder="Message Gemini..."
