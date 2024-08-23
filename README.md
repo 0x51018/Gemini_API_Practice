@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Gemini 1.5 Flash Chat Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a chat application that connects to the Gemini 1.5 Flash API, allowing users to send messages and receive responses from the Gemini AI. The application was created as a practice exercise to familiarize with the usage of generative AI APIs like Gemini.
 
-Currently, two official plugins are available:
+You can try the application directly by visiting the following link: [Gemini API Practice](https://0x51018.github.io/Gemini_API_Practice/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Overview](https://www.notion.so/297310439c5c441292102f231dc27a10?pvs=21)
+- [Features](https://www.notion.so/297310439c5c441292102f231dc27a10?pvs=21)
+- [Usage](https://www.notion.so/297310439c5c441292102f231dc27a10?pvs=21)
+- [Technologies Used](https://www.notion.so/297310439c5c441292102f231dc27a10?pvs=21)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
+This project was developed as a way to practice and understand the usage of generative AI APIs, specifically the Gemini 1.5 Flash API. It serves as a practical example of how to integrate and interact with such APIs in a web application. The goal was to gain hands-on experience with API integration, user interface design, and handling AI-generated content.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Features
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Real-time Chatting**: Users can send messages and receive instant responses from the Gemini 1.5 Flash API.
+- **Markdown Support**: The bot's responses are rendered using markdown, allowing for rich text formatting such as bold, italic, headers, etc.
+- **Message Copying**: Users can easily copy the bot's responses to their clipboard with a simple button click.
+- **Responsive Design**: The chat interface is responsive and adapts to different screen sizes, providing a seamless experience on both desktop and mobile devices.
+
+## Usage
+
+1. **Access the Application**:
+    - Visit the following link to access the application directly: [Gemini API Practice](https://0x51018.github.io/Gemini_API_Practice/).
+    - The app will load and prompt you to enter your Gemini API key to connect.
+2. **Send Messages**:
+    - Type your message in the input field at the bottom of the chat and press `Enter` or click the send button.
+    - The message will be sent to the Gemini 1.5 Flash API, and the bot's response will be displayed in the chat.
+3. **Copy Bot Responses**:
+    - Each bot response has a copy button. Click the button to copy the text to your clipboard.
+
+## Technologies Used
+
+This project was built using the following technologies:
+
+- **Vite**: For fast and optimized development, Vite was used to create the React application.
+- **React**: The core library for building the user interface.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **shadcn/ui**: A set of accessible and customizable UI components built on top of Radix UI.
+- **Radix UI**: A library of accessible, unstyled UI primitives for building modern web applications.
