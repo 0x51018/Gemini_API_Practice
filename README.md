@@ -6,10 +6,10 @@ You can try the application directly by visiting the following link: [Gemini API
 
 ## Table of Contents
 
-- [Overview](https://www.notion.so/297310439c5c441292102f231dc27a10?pvs=21)
-- [Features](https://www.notion.so/297310439c5c441292102f231dc27a10?pvs=21)
-- [Usage](https://www.notion.so/297310439c5c441292102f231dc27a10?pvs=21)
-- [Technologies Used](https://www.notion.so/297310439c5c441292102f231dc27a10?pvs=21)
+- [Overview](#overview)
+- [Features](#features)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
 
 ## Overview
 
